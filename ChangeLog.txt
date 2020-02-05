@@ -1,0 +1,15 @@
+Title: Fininex
+Author: Igor Bistrovic
+Company: -
+Project: AutoLife
+Version: 0.0.1
+UpdateNotes: -
+
+Change log: 
+    20/02/05:   - created "ChangeLog.txt"
+                - created "README.txt"
+                - created ".gitgnore"
+                    .vs
+                    bin/
+                    obj/
+                - created git repository
