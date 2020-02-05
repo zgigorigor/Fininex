@@ -13,3 +13,6 @@ Change log:
                     bin/
                     obj/
                 - created git repository
+                - created "Fininex" ASP.NET Web Application (.NET Framework)
+                - created "" Class Library (.NET Framework)
+                - created ""
