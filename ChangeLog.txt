@@ -28,3 +28,5 @@ Change log:
                 - added Dapper
                 - added ConfigurationManager
                 - changed Amount int to float
+    20/02/09 Version 1.0.0
+    20/02/09:   - 
