@@ -2,7 +2,7 @@ Title: Fininex
 Author: Igor Bistrovic
 Company: -
 Project: AutoLife
-Version: 0.1.2
+Version: 0.0.19
 UpdateNotes: -
 
 Change log: 
@@ -22,3 +22,9 @@ Change log:
                 - updated Views/Home/Index.cshtml
                 - created Views/Home/ViewEntries.cshtml
                 - updated Views/Shared/_Layout.cshtml
+                - added database, table "Entry.sql"
+                - publish database local, FininexDatabasePublished
+                - created EntryProcessor.cs, SqlDataAccess.cs, EntryModel.cs in DataLibrary project
+                - added Dapper
+                - added ConfigurationManager
+                - changed Amount int to float

@@ -13,7 +13,7 @@ namespace fininex2.Models
         public string Name { get; set; }
 
         [Required(ErrorMessage = "You need to write entry amount!")]
-        public int Amount { get; set; }
+        public float Amount { get; set; }
 
         [Required(ErrorMessage = "You need to write entry currency!")]
         public string Currency { get; set; }
