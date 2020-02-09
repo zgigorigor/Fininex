@@ -1,10 +1,13 @@
-﻿using System;
+﻿using fininex2.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using DataLibrary;
+using static DataLibrary.BusinessLogic.EntryProcessor;
 
-namespace Fininex.Controllers
+namespace fininex2.Controllers
 {
     public class HomeController : Controller
     {
@@ -13,16 +16,62 @@ namespace Fininex.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult FininexHome()
         {
-            ViewBag.Message = "Your application description page.";
+            return View();
+        }
+
+        //public ActionResult About()
+        //{
+        //    ViewBag.Message = "Your application description page.";
+
+        //    return View();
+        //}
+
+        //public ActionResult Contact()
+        //{
+        //    ViewBag.Message = "Your contact page.";
+
+        //    return View();
+        //}
+
+        public ActionResult ViewEntries()
+        {
+            ViewBag.Message = "Entry List";
+
+            var data = LoadEntries();
+            List<EntryModel> entries = new List<EntryModel>();
+
+            foreach (var row in data)
+            {
+                entries.Add(new EntryModel
+                {
+                    Name = row.Name,
+                    Amount = row.Amount,
+                    Currency = row.Currency,
+                    Description = row.Description
+                });
+            }
+
+            return View(entries);
+        }
+
+        public ActionResult EntryInput()
+        {
+            ViewBag.Message = "Entry input.";
 
             return View();
         }
 
-        public ActionResult Contact()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EntryInput(EntryModel model)
         {
-            ViewBag.Message = "Your contact page.";
+            if (ModelState.IsValid)
+            {
+                int recordCreated = CreateEntry(model.Name, model.Amount, model.Currency, model.Description);
+                return RedirectToAction("ViewEntries");
+            }
 
             return View();
         }

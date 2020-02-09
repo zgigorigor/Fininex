@@ -2,7 +2,7 @@ Title: Fininex
 Author: Igor Bistrovic
 Company: -
 Project: AutoLife
-Version: 0.0.1
+Version: 0.1.2
 UpdateNotes: -
 
 Change log: 
@@ -15,4 +15,10 @@ Change log:
                 - created git repository
                 - created "Fininex" ASP.NET Web Application (.NET Framework)
                 - created "" Class Library (.NET Framework)
-                - created ""
+                - created "" SQL Server Database Project
+    20/02/09:   - created Model/EntryModel.cs
+                - updated Controllers/HomeController.cs
+                - created Views/Home/EntryInput.cshtml
+                - updated Views/Home/Index.cshtml
+                - created Views/Home/ViewEntries.cshtml
+                - updated Views/Shared/_Layout.cshtml
