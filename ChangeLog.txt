@@ -29,4 +29,7 @@ Change log:
                 - added ConfigurationManager
                 - changed Amount int to float
     20/02/09 Version 1.0.0
-    20/02/09:   - 
+    20/02/22:   - minor _layout changes
+                - trying to implement entityframework
+                    - created DataLibrary/DataAccess/Entry.cs
+                    

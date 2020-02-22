@@ -20,5 +20,6 @@ namespace fininex2.Models
 
         [Required(ErrorMessage = "You need to write entry description!")]
         public string Description { get; set; }
+        
     }
 }
