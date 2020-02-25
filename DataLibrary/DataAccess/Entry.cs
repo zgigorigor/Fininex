@@ -1,25 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DataLibrary.Models;
-using Microsoft.EntityFrameworkCore;
-
 namespace DataLibrary.DataAccess
 {
-    public class Entry : DbContext
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
+
+    [Table("Entry")]
+    public partial class Entry
     {
-        public Entry() : base("Entry")
-        {
-        }
+        public int Id { get; set; }
 
-        public DbSet<Entry> Name { get; set; }
-        public DbSet<Entry> Amount { get; set; }
-        public DbSet<Entry> Currency { get; set; }
-        public DbSet<Entry> Description { get; set; }
-        
+        [Required]
+        [StringLength(50)]
+        public string Name { get; set; }
+
+        public float Amount { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string Currency { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string Description { get; set; }
     }
-
-    
 }

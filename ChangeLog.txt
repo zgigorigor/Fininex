@@ -32,4 +32,5 @@ Change log:
     20/02/22:   - minor _layout changes
                 - trying to implement entityframework
                     - created DataLibrary/DataAccess/Entry.cs
+    20/02/25:   - created Entry.cs (ADO.NET Entity Data Model template)
                     
