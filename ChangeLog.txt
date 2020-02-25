@@ -33,4 +33,5 @@ Change log:
                 - trying to implement entityframework
                     - created DataLibrary/DataAccess/Entry.cs
     20/02/25:   - created Entry.cs (ADO.NET Entity Data Model template)
+                - created EntryEntitites, trying to connect database with views
                     

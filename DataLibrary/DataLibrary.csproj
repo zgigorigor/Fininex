@@ -149,6 +149,7 @@
     <Compile Include="BusinessLogic\EntryProcessor.cs" />
     <Compile Include="DataAccess\Entry.cs" />
     <Compile Include="DataAccess\SqlDataAccess.cs" />
+    <Compile Include="Models\EntryEntities.cs" />
     <Compile Include="Models\EntryModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
